@@ -188,7 +188,7 @@ The OME-Zarr Metadata version MUST be consistent within a hierarchy.
 
 The "axes" are used as part of [[#multiscale-md]]. The length of "axes" MUST be equal to the number of dimensions of the arrays that contain the image data.
 
-The "dimension_names" attribute in the `zarr.json` of the Zarr array of a multiscale level MUST match the names in the "axes" metadata.
+The "dimension_names" attribute MUST be included in the `zarr.json` of the Zarr array of a multiscale level and MUST match the names in the "axes" metadata.
 
 
 "bioformats2raw.layout" (transitional) {#bf2raw}
@@ -380,6 +380,12 @@ can be found under the "omero" key in the group-level metadata:
 
 See the [OMERO WebGateway documentation](https://omero.readthedocs.io/en/stable/developers/Web/WebGateway.html#imgdata)
 for more information.
+
+The "omero" metadata is optional, but if present it MUST contain the field "channels", which is an array of dictionaries describing the channels of the image.
+Each dictionary in "channels" MUST contain the field "color", which is a string of 6 hexadecimal digits specifying the color of the channel in RGB format.
+Each dictionary in "channels" MUST contain the field "window", which is a dictionary describing the windowing of the channel.
+The field "window" MUST contain the fields "min" and "max", which are the minimum and maximum values of the window, respectively.
+It MUST also contain the fields "start" and "end", which are the start and end values of the window, respectively.
 
 "labels" metadata {#labels-md}
 ------------------------------
@@ -590,7 +596,17 @@ Version History {#history}
     </tr>
   </thead>
   <tr>
-    <td>0.5</td>
+    <td>0.5.2</td>
+    <td>2025-01-10</td>
+    <td>Clarify that the <code>dimension_names</code> field in <code>axes</code> MUST be included.</td>
+  </tr>
+  <tr>
+    <td>0.5.1</td>
+    <td>2025-01-10</td>
+    <td>Re-add the improved omero description in PR-191.</td>
+  </tr>
+  <tr>
+    <td>0.5.0</td>
     <td>2024-11-21</td>
     <td>use Zarr v3 in OME-Zarr, see <a href="https://ngff.openmicroscopy.org/rfc/2">RFC-2</a>.</td>
   </tr>
