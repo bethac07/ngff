@@ -1,5 +1,5 @@
 @: template
-# RFC-6: Channel Specification
+# RFC-7: Channel Specification
 
 Create a specification to comprehensively-enough describe channels in the OME specification
 
@@ -10,7 +10,7 @@ This RFC is currently in DRAFT state (D1).
 | Role      | Name        | GitHub Handle | Institution | Date       | Status                                |
 | --------- | ---------   | ------------- | ----------- | ---------- | ------------------------------------- |
 | Author    | Beth Cimini |bethac07       | Broad Institute         | xxxx-xx-xx | Author                                |
-| Author    |             | N/A           | N/A         | xxxx-xx-xx | Author; Implemented (link to release) |
+| Author    | Erin Weisbart | ErinWeisbart | Broad Institute         | xxxx-xx-xx | Author; Implemented (link to release) |
 | Commenter |             | N/A           | N/A         | xxxx-xx-xx | Endorse (link to comment)             |
 | Commenter |             | N/A           | N/A         | xxxx-xx-xx | Not yet (link to comment)             |
 | Endorser  |             | N/A           | N/A         | xxxx-xx-xx | Endorse (no link needed)              |
