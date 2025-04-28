@@ -1,0 +1,22 @@
+{
+    "what":{
+        "targeted_molecule":"some_ontology_multiselect"
+    },
+    "how":{
+        "acquired/derived":{
+            "acquired":{
+                "label_free_optical_method":"none_or_freetext_or_some_ontology_TBD",
+                "cycle":"none_or_int"
+            },
+            "derived":{
+                "ontology_of_derivations":"edam_bioimaging_ontology_check_about_IMC_and_demultiplexing_in_general",
+                "link_to_workflow":""
+            }
+        },
+        "targeting_mechanism":"some_ontology_multiselect", 
+        "label":"some_ontology_multiselect_fluorophores_and_chromophores_and_EM_stuff"
+    },
+    "why":{
+        "expected_structure":"some_ontologies_multiselect"
+        }
+}
